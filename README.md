@@ -6,6 +6,7 @@
 The is a fork of the official Ruby client library for [InfluxDB](https://influxdata.com/time-series-platform/influxdb/).
 Maintained by [@toddboom](https://github.com/toddboom) and [@dmke](https://github.com/dmke).
 
+
 ## Contents
 
 - [Platform support](#platform-support)
@@ -45,12 +46,11 @@ for documentation.
 
 ## Installation
 
-```
-$ [sudo] gem install influxdb
-```
+Add it to your `Gemfile`, and run `bundle install`.
 
-Or add it to your `Gemfile`, and run `bundle install`.
-
+```
+gem 'influxdb', github: "OvidiuToma/influxdb-ruby"
+```
 ## Usage
 
 *All examples assume you have a `require "influxdb"` in your code.*
