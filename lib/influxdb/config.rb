@@ -40,6 +40,7 @@ module InfluxDB
     # Query options
     chunk_size:           nil,
     denormalize:          true,
+    proxy_link:           nil
   }.freeze
 
   # InfluxDB client configuration
