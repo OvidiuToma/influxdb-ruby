@@ -45,7 +45,12 @@ module InfluxDB
       retry_count = 0
 
       begin
-        http = Net::HTTP.new(host, config.port)
+        if config.proxy_link
+          proxy = URI(config.proxy_link)
+          http = Net::HTTP.new(host, config.port, proxy.host, proxy.port, proxy.user, proxy.password)
+        else
+          http = Net::HTTP.new(host, config.port)
+        end
         http.open_timeout = config.open_timeout
         http.read_timeout = config.read_timeout
 
